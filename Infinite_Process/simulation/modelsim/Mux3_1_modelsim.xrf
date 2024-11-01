@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Infinite_Process/Mux3_1_tb.v
+source_file = 1, C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Infinite_Process/Mux3_1.v
+source_file = 1, C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Infinite_Process/db/Mux3_1.cbx.xml
+design_name = Mux3_1
+instance = comp, \out~output , out~output, Mux3_1, 1
+instance = comp, \sel[1]~input , sel[1]~input, Mux3_1, 1
+instance = comp, \in2~input , in2~input, Mux3_1, 1
+instance = comp, \sel[0]~input , sel[0]~input, Mux3_1, 1
+instance = comp, \in1~input , in1~input, Mux3_1, 1
+instance = comp, \in0~input , in0~input, Mux3_1, 1
+instance = comp, \out~0 , out~0, Mux3_1, 1
+instance = comp, \out~1 , out~1, Mux3_1, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1
