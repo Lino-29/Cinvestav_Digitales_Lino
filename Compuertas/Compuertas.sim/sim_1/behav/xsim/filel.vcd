@@ -1,0 +1,597 @@
+$date
+   Sat Nov  9 10:18:06 2024
+$end
+
+$version
+  2024.1
+  $dumpfile ("filel.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module Compuertas_tb $end
+$var reg 1 ! clk $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 4 $ bitwise_and [3:0] $end
+$var reg 4 % bitwise_or [3:0] $end
+$var reg 4 & bitwise_xor [3:0] $end
+$var integer 32 ' i [31:0] $end
+$var event 32 ( a_ev $end
+$var event 32 ) b_ev $end
+$var event 32 * and_ev $end
+$scope begin Block42_1 $end
+$var reg 32 + xilinx_isim_temp_0_ln44wrapper_class_obj $end
+$upscope $end
+$scope begin Block49_3 $end
+$var reg 32 , xilinx_isim_temp_1_ln51wrapper_class_obj $end
+$upscope $end
+$scope begin Block55_5 $end
+$var reg 32 - xilinx_isim_temp_2_ln57wrapper_class_obj $end
+$upscope $end
+$scope module DUT $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 4 & bitwise_and [3:0] $end
+$var reg 4 % bitwise_or [3:0] $end
+$var reg 4 $ bitwise_xor [3:0] $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_0_0::new $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_0_0::update $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_0_0::randomize_testwrapper_std_randomize_wrapper_0_0 $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_1_1::new $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_1_1::update $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_1_1::randomize_testwrapper_std_randomize_wrapper_1_1 $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_2_2::new $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_2_2::update $end
+$upscope $end
+$scope function wrapper_std_randomize_wrapper_2_2::randomize_testwrapper_std_randomize_wrapper_2_2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+b0 "
+b0 #
+b0 $
+b0 %
+b0 &
+b0 '
+bx (
+bx )
+bx *
+b0 +
+b0 ,
+b0 -
+$end
+
+#10000
+1!
+b101 "
+b1010 #
+b1111 $
+b1111 %
+
+#20000
+0!
+
+#30000
+1!
+b1101 "
+b100 #
+b1001 $
+b1101 %
+b100 &
+
+#40000
+0!
+
+#50000
+1!
+b1011 "
+b0 #
+b1011 $
+b1011 %
+b0 &
+
+#60000
+0!
+
+#70000
+1!
+b1011 #
+b0 $
+b1011 &
+
+#80000
+0!
+
+#90000
+1!
+b0 "
+b1111 #
+b1111 $
+b1111 %
+b0 &
+
+#100000
+0!
+
+#110000
+1!
+b1111 "
+b111 #
+b1000 $
+b111 &
+
+#120000
+0!
+
+#130000
+1!
+b110 "
+b11 #
+b101 $
+b111 %
+b10 &
+
+#140000
+0!
+
+#150000
+1!
+b1000 "
+b1001 #
+b1 $
+b1001 %
+b1000 &
+
+#160000
+0!
+
+#170000
+1!
+b1111 "
+b100 #
+b1011 $
+b1111 %
+b100 &
+
+#180000
+0!
+
+#190000
+1!
+b1101 "
+b0 #
+b1101 $
+b1101 %
+b0 &
+
+#200000
+0!
+
+#210000
+1!
+b0 "
+b1101 #
+b1101 $
+
+#220000
+0!
+
+#230000
+1!
+b1100 "
+b1 $
+b1100 &
+
+#240000
+0!
+
+#250000
+1!
+b1010 "
+b10 #
+b1000 $
+b1010 %
+b10 &
+
+#260000
+0!
+
+#270000
+1!
+b0 "
+b1001 #
+b1001 $
+b1001 %
+b0 &
+
+#280000
+0!
+
+#290000
+1!
+b1011 "
+b101 #
+b1110 $
+b1111 %
+b1 &
+
+#300000
+0!
+
+#310000
+1!
+b1001 "
+b11 #
+b1010 $
+b1011 %
+
+#320000
+0!
+
+#330000
+1!
+b0 "
+b101 #
+b101 $
+b101 %
+b0 &
+
+#340000
+0!
+
+#350000
+1!
+b1111 "
+b1000 #
+b111 $
+b1111 %
+b1000 &
+
+#360000
+0!
+
+#370000
+1!
+b11 "
+b1110 #
+b1101 $
+b10 &
+
+#380000
+0!
+
+#390000
+1!
+b1101 #
+b1110 $
+b1 &
+
+#400000
+0!
+
+#410000
+1!
+b1000 "
+b1 #
+b1001 $
+b1001 %
+b0 &
+
+#420000
+0!
+
+#430000
+1!
+b111 "
+b1111 #
+b1000 $
+b1111 %
+b111 &
+
+#440000
+0!
+
+#450000
+1!
+b1011 "
+b1001 #
+b10 $
+b1011 %
+b1001 &
+
+#460000
+0!
+
+#470000
+1!
+b1101 "
+b110 #
+b1011 $
+b1111 %
+b100 &
+
+#480000
+0!
+
+#490000
+1!
+b1000 "
+b1 #
+b1001 $
+b1001 %
+b0 &
+
+#500000
+0!
+
+#510000
+1!
+b1100 #
+b100 $
+b1100 %
+b1000 &
+
+#520000
+0!
+
+#530000
+1!
+b1001 "
+b101 $
+b1101 %
+
+#540000
+0!
+
+#550000
+1!
+b1011 "
+b111 #
+b1100 $
+b1111 %
+b11 &
+
+#560000
+0!
+
+#570000
+1!
+b1101 "
+b1101 #
+b0 $
+b1101 %
+b1101 &
+
+#580000
+0!
+
+#590000
+1!
+b1 "
+b1000 #
+b1001 $
+b1001 %
+b0 &
+
+#600000
+0!
+
+#610000
+1!
+b101 "
+b110 #
+b11 $
+b111 %
+b100 &
+
+#620000
+0!
+
+#630000
+1!
+b1110 "
+b10 #
+b1100 $
+b1110 %
+b10 &
+
+#640000
+0!
+
+#650000
+1!
+b1011 "
+b1011 #
+b0 $
+b1011 %
+b1011 &
+
+#660000
+0!
+
+#670000
+1!
+b111 "
+b1 #
+b110 $
+b111 %
+b1 &
+
+#680000
+0!
+
+#690000
+1!
+b10 "
+b101 #
+b111 $
+b0 &
+
+#700000
+0!
+
+#710000
+1!
+b1011 "
+b11 #
+b1000 $
+b1011 %
+b11 &
+
+#720000
+0!
+
+#730000
+1!
+b1001 $
+
+#740000
+0!
+
+#750000
+1!
+b1001 "
+b1001 #
+b0 $
+b1001 %
+b1001 &
+
+#760000
+0!
+
+#770000
+1!
+b11 "
+b100 #
+b111 $
+b111 %
+b0 &
+
+#780000
+0!
+
+#790000
+1!
+b110 "
+b1 #
+b111 $
+
+#800000
+0!
+
+#810000
+1!
+b1111 "
+b111 #
+b1000 $
+b1111 %
+b111 &
+
+#820000
+0!
+
+#830000
+1!
+b1010 "
+b0 #
+b1010 $
+b1010 %
+b0 &
+
+#840000
+0!
+
+#850000
+1!
+b1000 "
+b1001 #
+b1 $
+b1001 %
+b1000 &
+
+#860000
+0!
+
+#870000
+1!
+b101 "
+b1 #
+b100 $
+b101 %
+b1 &
+
+#880000
+0!
+
+#890000
+1!
+b1110 "
+b10 #
+b1100 $
+b1110 %
+b10 &
+
+#900000
+0!
+
+#910000
+1!
+b100 "
+b1010 #
+b1110 $
+b0 &
+
+#920000
+0!
+
+#930000
+1!
+b101 "
+b1111 $
+b1111 %
+
+#940000
+0!
+
+#950000
+1!
+b1110 "
+b10 #
+b1100 $
+b1110 %
+b10 &
+
+#960000
+0!
+
+#970000
+1!
+b1011 "
+b111 #
+b1100 $
+b1111 %
+b11 &
+
+#980000
+0!
+
+#990000
+1!
+b1111 "
+b1000 $
+b111 &
