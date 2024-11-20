@@ -21,15 +21,16 @@
 
 
 module Adder_tb;
- 
+
   parameter ADDER_WIDTH = 8;
- 
-/*
-  logic [(WIDTH - 1): 0] result;
-  bit [(WIDTH - 1): 0] a;
-  bit [(WIDTH - 1): 0] b;
-*/
+
   adder_intf #(ADDER_WIDTH) adder_intf_i(); // Creamos la instancia de la interface
+  
+  logic carry_out;
+
+/*   bit clk;
+
+  assign #5 clk = ~clk; */
  
  
   Adder #(ADDER_WIDTH /* Pre-synthesis */) DUT (
@@ -37,6 +38,7 @@ module Adder_tb;
       .a(adder_intf_i.a),
       .b(adder_intf_i.b)
   );
+
 
 //    `define TEST1
    `define TEST2
@@ -119,14 +121,14 @@ module Adder_tb;
 endmodule: Adder_tb
 
 
-//Interface 1 
-interface div_intf #(parameter WIDTH = 8 /* Pre-synthesis */) ();
+/* //Interface 1 
+interface div_intf #(parameter WIDTH = 8 ) ();
  
-endinterface
+endinterface */
 
  
 //Interface 2 
-interface adder_intf #(parameter WIDTH = 8 /* Pre-synthesis */) ();
+interface adder_intf #(parameter WIDTH = 8) ();
  
   logic [WIDTH-1:0] a;
   logic [WIDTH-1:0] b;
@@ -181,23 +183,93 @@ interface adder_intf #(parameter WIDTH = 8 /* Pre-synthesis */) ();
  
 endinterface: adder_intf
  
- 
+
+
+module Adder_tb;
+
+  parameter ADDER_WIDTH = 8;
+  adder_intf #(ADDER_WIDTH) adder_intf_i();
+
+  logic carry_out;
   
-  /* Logica que genera estimulos */
- 
-  /* Logica que checa que el comportamiento del DUT haga match con base en la spec */
-  /* Logica que me dice que tanto del DUT se a ejercitado */
-/*
-  automatic function fnc1();
-    bit a;
-    bit b;
-  endfunction
-  fork
-    begin
-      fnc1(); // variable dinamica a y b se va a generar
+  Adder #(ADDER_WIDTH) DUT (
+      .result(adder_intf_i.result),
+      .carry_out(carry_out),
+      .a(adder_intf_i.a),
+      .b(adder_intf_i.b)
+  );
+
+  // Uncomment the test you want to run
+  // `define TEST1
+  `define TEST2
+  // `define TEST3
+  // `define TEST4
+  // `define TEST5
+
+  `ifdef TEST1
+    initial begin
+      adder_intf_i.add_a_b_zero();
+      #1;
+      assert(adder_intf_i.result == 0 && carry_out == 0) else $error("Test1 failed: Zero sum mismatch");
+      repeat(1000) begin
+        adder_intf_i.add_a_b_random();
+        #1;
+        assert(adder_intf_i.result == (adder_intf_i.a + adder_intf_i.b) && carry_out == ((adder_intf_i.a + adder_intf_i.b) >> ADDER_WIDTH)) else
+          $fatal("Test1 failed: Random sum mismatch");
+      end
+      adder_intf_i.add_a_b_zero();
+      #1;
+      assert(adder_intf_i.result == 0 && carry_out == 0) else $error("Test1 failed: Final zero sum mismatch");
+      $finish;
     end
-    begin
-      fnc1(); // variable dinamica a y b se va a generar
+  `endif
+
+  `ifdef TEST2
+    initial begin
+      repeat(10) begin
+        adder_intf_i.add_b_signed_random();
+        #1;
+        assert (adder_intf_i.result == (adder_intf_i.a + adder_intf_i.b) && carry_out == ((adder_intf_i.a + adder_intf_i.b) >> ADDER_WIDTH)) else
+          $error("Test2 failed: Signed sum mismatch");
+      end
+      $finish;
     end
-  join
-*/
+  `endif
+
+  `ifdef TEST3
+    initial begin
+      repeat(10) begin
+        adder_intf_i.add_a_limit_with_carry();
+        #1;
+        assert(adder_intf_i.result == (adder_intf_i.a + adder_intf_i.b) && carry_out == ((adder_intf_i.a + adder_intf_i.b) >> ADDER_WIDTH)) else
+          $error("Test3 failed: Limit with carry mismatch");
+      end
+      $finish;
+    end
+  `endif
+
+  `ifdef TEST4
+    initial begin
+      repeat(10) begin
+        adder_intf_i.add_close_limit();
+        #1;
+        assert(adder_intf_i.result == (adder_intf_i.a + adder_intf_i.b) && carry_out == ((adder_intf_i.a + adder_intf_i.b) >> ADDER_WIDTH)) else
+          $error("Test4 failed: Close limit mismatch");
+      end
+      $finish;
+    end
+  `endif
+
+  `ifdef TEST5
+    initial begin
+      repeat(10) begin
+        adder_intf_i.add_one_to_close_max_value();
+        #1;
+        assert(adder_intf_i.result == (adder_intf_i.a + adder_intf_i.b) && carry_out == ((adder_intf_i.a + adder_intf_i.b) >> ADDER_WIDTH)) else
+          $error("Test5 failed: One to close max value mismatch");
+      end
+      $finish;
+    end
+  `endif
+
+endmodule: Adder_tb

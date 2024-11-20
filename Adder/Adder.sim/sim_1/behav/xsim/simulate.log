@@ -1,2 +1,12 @@
 Time resolution is 1 ps
-$finish called at time : 1 ns : File "C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/VivadoProjects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv" Line 75
+Error: Test2 failed: Signed sum mismatch
+Time: 1 ns  Iteration: 0  Process: /Adder_tb/Initial228_0  Scope: Adder_tb  File: C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv Line: 233
+Error: Test2 failed: Signed sum mismatch
+Time: 2 ns  Iteration: 0  Process: /Adder_tb/Initial228_0  Scope: Adder_tb  File: C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv Line: 233
+Error: Test2 failed: Signed sum mismatch
+Time: 4 ns  Iteration: 0  Process: /Adder_tb/Initial228_0  Scope: Adder_tb  File: C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv Line: 233
+Error: Test2 failed: Signed sum mismatch
+Time: 6 ns  Iteration: 0  Process: /Adder_tb/Initial228_0  Scope: Adder_tb  File: C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv Line: 233
+Error: Test2 failed: Signed sum mismatch
+Time: 10 ns  Iteration: 0  Process: /Adder_tb/Initial228_0  Scope: Adder_tb  File: C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv Line: 233
+$finish called at time : 10 ns : File "C:/Users/linor/Documents/Maestria/DigitalSystemsDesign/Github_Projects/Adder/Adder.srcs/sim_1/new/Adder_tb.sv" Line 235
